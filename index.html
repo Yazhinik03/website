@@ -13,18 +13,30 @@
             height: 100vh;
             width: 100vw;
             background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             justify-self: start;
+            align-items: center;
         }
         .section1{
             width: 70%;
-            height: 12rem;
-            background-color: aquamarine;
+            height: 70%;
+            background: #16222A;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
+            border: 1px solid teal;
+        }
+        .profile-img-section{
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .profile-img{
             width: 8rem;
@@ -32,37 +44,93 @@
             border-radius: 50%;
         }
         .profile-data{
-            width: 30%;
-            height: 100%;
+            width: 40%;
             display: flex;
-            justify-self: end;
-            align-items: ;
+            flex-direction: column;
+            justify-self: center;
+            align-items: flex-start;
+        }
+        .section2{
+            width: 70%;
+            height: 70%;
+            border: 1px solid teal;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+        .section3{
+            width: 70%;
+            height: 80%;
+            border: 1px solid teal;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+        .section4{
+            width: 70%;
+            height: 100%;
+            border: 1px solid teal;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+        .section5{
+            width: 70%;
+            height: 200%;
+            border: 1px solid teal;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+        .section-title{
+            color: teal;
+            font-weight: bold;
         }
         .ed-table{
-            width: 100%;
+            width: 75%;
+            border: 2px solid gray;
+            border-collapse: collapse;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        th,
+        td{
+            padding: 1rem;
+            border: 1px solid gray;
+        }
+        .companies{
+            font-weight: bold;
+            color: teal;
         }
     </style>
 </head>
 <body>
     <div class="section1">
-        <div class="profile-img">
-            <img src=" https://i.pinimg.com/736x/99/6c/a6/996ca6d41ae979589d3f50e0967cdcb9.jpg"
+        <div class="profile-img-section">
+            <div class="profile-img">
+            <img src=" https://i.pinimg.com/736x/99/6c/a6/996ca6d41ae979589d3f50e0967cdcb9.jpg" alt="cat" class="profile-img">
+            </div>
         </div>
         <div class="profile-data">
-            <h1>YAZHINI K</h1>
-            <h3>yazhini2003k@gmail.com</h3>
+            <h1 style="color: white;">YAZHINI K</h1>
+            <h3 style="color: white;">yazhini2003k@gmail.com</h3>
         </div>
     </div>
     <div class="section2">
         <h1 class="section-title">
             Objective
-        </h1>
-        <p> The cat, also referred to as domestic cat or house cat, is a small domesticated carnivorous mammal. It is the only domesticated species of the family Felidae. Advances in archaeology and genetics have shown that the domestication of the cat occurred in the Near East around 7500 BC.</p>
+        </h1><br>
+        <p style="font-size: 125%;"> The cat, also referred to as domestic cat or house cat, is a small domesticated carnivorous mammal. It is the only domesticated species of the family Felidae. Advances in archaeology and genetics have shown that the domestication of the cat occurred in the Near East around 7500 BC.</p>
     </div>
     <div class="section3">
-        <h1 class=""section-title>
+        <h1 class="section-title">
             Education
         </h1>
+        <br>
         <table class="ed-table">
         <tr>
             <th>Degree</th>
@@ -85,8 +153,31 @@
             <th>75%</th>
         </tr>
         </table>
+        <br>
     </div>
-    <div class="section4"></div>
-    <div class="section5"></div>
+    <div class="section4">
+        <h1 class="section-title">
+            Internship
+        </h1>
+        <p>
+            <span>GOOGLE</span> June 2024<br>
+            <span>AMAZON</span> JULY 2024<br>
+            <span>MICROSOFT</span> MAY 2024
+        </p>
+    </div>
+    <div class="section5">
+        <h1 class="section-title">
+            Experience
+        </h1>
+        <p>It is best to list your work history in reverse chronological order, starting with the most recent job at the top, followed by the next most recent and so on. To ensure that the section is not too long, exclude any work experiences older than ten years.</p>
+        <p>Language
+            Use the past tense for previous jobs, and write in the first person, but exclude pronouns. 
+             
+            Entry-level
+            If you're an entry-level candidate, include all relevant paid work, such as freelance jobs, internships, and temporary work. 
+             
+            Gaps
+            If you have gaps in your work history, list only the years of employment for brief gaps, and provide a brief explanation for longer gaps</p>
+    </div>
 </body>
 </html>
