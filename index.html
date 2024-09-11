@@ -29,6 +29,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
+            border-radius: 10px;
             /* border: 1px solid teal; */
         }
         .profile-img-section{
@@ -80,14 +81,15 @@
         }
         .section5{
             width: 70%;
-            height: 200%;
+            height: 100%;
             /* border: 1px solid teal; */
             display: flex;
             flex-direction: column;
             align-items: start;
             justify-content: center;
         }
-        .section-title{
+        
+.section-title{
             color: teal;
             font-weight: bold;
         }
@@ -117,6 +119,15 @@
         }
         .section6{
             width: 70%;
+            height: 200%;
+            /* border: 1px solid teal; */
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+        .section7{
+            width: 70%;
             height: 2rem;
             display: flex;
             flex-direction: row;
@@ -124,7 +135,10 @@
             gap: 3rem;
             font-weight: bold;
             justify-content: center;
-            background-color: teal;
+            background: #16222A;  
+            background: -webkit-linear-gradient(to right, #3A6073, #16222A);
+            background: linear-gradient(to right, #3A6073, #16222A);
+            border-radius: 10px;
             /* border: 1px solid teal; */
             
         }
@@ -146,6 +160,82 @@
 *::-webkit-scrollbar-thumb {
   background: #666; 
 }
+* {box-sizing:border-box}
+
+.container {
+  width: 40%; 
+  background-color: #f5f5f5; 
+}
+.skills {
+  text-align: right;
+  padding-top: 5px; 
+  padding-bottom: 5px;
+  color: white; 
+}
+
+.html {width: 90%; background-color: teal;}
+.css {width: 80%; background-color: teal;} 
+.js {width: 65%; background-color: teal;} 
+.php {width: 60%; background-color: teal;} 
+.cont{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.cont .progress{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    color: black;
+    background:#444 linear-gradient(to right,transparent 50%, var(--clr) 0);
+}
+.cont .progress h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2.5rem;
+    z-index: 1;
+    font-weight: 500;
+}
+.cont .progress h3 span{
+    font-size: 0.65em;
+    font-weight: 400;;
+}
+.cont .progress h6{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-weight: 800;
+    color: var(--clr);
+    text-transform: uppercase;
+}
+.cont .progress::before{
+    content: '';
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0/50%;
+}
+.cont .progress::after{
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border-radius: 50%;
+    background: #fff;
+
+}
+.cont .progress::before{
+    background: var(--clr);
+    transform: rotate(calc(((var(--i) - 50)*0.01turn)));
+}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -154,7 +244,7 @@
     <div class="section1">
         <div class="profile-img-section">
             <div class="profile-img">
-            <img src=" https://i.pinimg.com/736x/99/6c/a6/996ca6d41ae979589d3f50e0967cdcb9.jpg" alt="cat" class="profile-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxsGc54Z_RISMcFq7PRkrriqgWO4nY89Feeg&s" alt="girl" class="profile-img">
             </div>
         </div>
         <div class="profile-data">
@@ -166,8 +256,9 @@
         <h1 class="section-title">
             Objective
         </h1><br>
-        <p style="font-size: 125%;"> The cat, also referred to as domestic cat or house cat, is a small domesticated carnivorous mammal. It is the only domesticated species of the family Felidae. Advances in archaeology and genetics have shown that the domestication of the cat occurred in the Near East around 7500 BC.</p>
+        <p style="font-size: 125%;"> Motivated student specializing in cybersecurity with hands-on experience in full stack development. Adept at both securing and developing web applications. Looking for an opportunity to apply my knowledge in a dynamic environment to contribute to robust security solutions and innovative software development.</p>
     </div>
+    <br>
     <div class="section3">
         <h1 class="section-title">
             Education
@@ -175,55 +266,104 @@
         <br>
         <table class="ed-table">
         <tr>
-            <th>Degree</th>
+            <th>Qualification</th>
             <th>Campus</th>
-            <th>Score%</th>
+            <th>Score</th>
         </tr>
         <tr>
-            <th>Deg 1</th>
-            <th>Camp 1</th>
-            <th>100%</th>
+            <th>SSLC</th>
+            <th>Ram Jayam Vidya Mandir Matriculation Higher Secondary School</th>
+            <th>97%</th>
         </tr>
         <tr>
-            <th>Deg 2</th>
-            <th>Camp 2</th>
-            <th>98%</th>
+            <th>HSC</th>
+            <th>Vivekananda Matriculation Higher Secondary School</th>
+            <th>87%</th>
         </tr>
         <tr>
-            <th>Deg 3</th>
-            <th>Camp 3</th>
-            <th>75%</th>
+            <th>BE-CSE CYBER SECURITY</th>
+            <th>Sri Shakthi Institute of Engineering and Technology</th>
+            <th>89%</th>
         </tr>
         </table>
         <br>
     </div>
     <div class="section4">
         <h1 class="section-title">
-            Internship
+            Projects
         </h1>
-        <p>
-            <span>GOOGLE</span> June 2024<br>
-            <span>AMAZON</span> JULY 2024<br>
-            <span>MICROSOFT</span> MAY 2024
-        </p>
+        <br>
+        <ul>
+            <li>RFID BASED ATTENDANCE SYSTEM - FEB 2023</li>
+            <li>SECURE CRYPTO WALLET SOLUTIONS - NOV 2023</li>
+            <li>MALICIOUS FILE IDENTIFICATION USING MAGIC NUMBERS - MAR 2024</li>
+        </ul>
     </div>
+    <br>
     <div class="section5">
         <h1 class="section-title">
-            Skills
-        </h1><br>
-        <ul>
-            <li>MERN</li>
-            <li>CYBER SECURITY</li>
-            <li>CLOUD</li>
-            <li>DEVOPS</li>
-        </ul>
+            Technical Skills
+        </h1>
+        <br>
+    <p>Python</p>
+    <div class="container">
+      <div class="skills html">90%</div>
+    </div>
+    
+    <p>Network Security</p>
+    <div class="container">
+      <div class="skills css">80%</div>
+    </div>
+    
+    <p>Mern</p>
+    <div class="container">
+      <div class="skills js">65%</div>
+    </div>
+    
+    <p>Java</p>
+    <div class="container">
+      <div class="skills php">60%</div>
+    </div>
+    </div>
+        <br>
+        <div class = "section6">
+            <h1 class="section-title">
+                Certifications
+            </h1>
+            <h3 class="section-title">
+                Google Cyber Security Courses
+            </h3>
+            <br>
+            <ul>
+                <li>FUNDAMENTALS OF CYBER SECURITY</li>
+                <li>AUTOMATED CYBER SECURITY TASK WITH PYTHON</li>
+                <li>RISK MANAGEMENT</li>
+            </ul>
         </div>
         <br>
-        <div class="section6">
-            <a href="tel:+91 987654321">
+        <h1 style="align-items:center;color: teal;">Professional Skills</h1>
+        <br>
+        <div class="cont">
+            <div class="progress" style ="--i:85;--clr:teal">
+                <h3>85<span>%</span></h3>
+                <h6>Communication</h6>
+            </div>
+            <div class="progress" style ="--i:60;--clr:teal">
+                <h3>60<span>%</span></h3>
+                <h6>Team Work</h6>
+            </div>
+            <div class="progress" style ="--i:80;--clr:teal">
+                <h3>80<span>%</span></h3>
+                <h6>Creativity</h6>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="section7">
+            <a href="tel:+91 8682058158">
                 <i class="fa-solid fa-phone text-white"></i>
             </a>
-            <a href="mailto:max.neo.dev@gmail.com">
+            <a href="mailto:yazhini2003k@gmail.com">
                 <i class="fa-solid fa-envelope text-white"></i>
             </a>
             <a href="https://www.linkedin.com/" target="_blank">
