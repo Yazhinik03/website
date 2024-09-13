@@ -4,7 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assest/css/style.css">
+    <style>
+            .container{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows: 300px 300px 300px;
+            grid-template-columns: 32% 32% 32%;
+            grid-template-rows: 300px 1fr 300px; 
+            grid-gap: 1%;
+        }
+        .red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+    grid-row: 2/3;
+    grid-column: -3/-2;
+}
+.green{
+    background-color: green;
+    grid-row: 3/4;
+    grid-column: -2/-1;
+} 
+@keyframes myanimations{
+    0% {
+        transform: translateX(-100%);
+        transform: translateY(100%); 
+        rotate: 90deg;
+        scale: -100%;
+    }
+    50% {
+        transform: translateX(50%);
+        transform: translateY(50%);
+        rotate: 180deg;
+        scale: 50%;
+
+    }
+    100%{
+        transform: translateX(0%);
+        transform: translateY(100%);
+        rotate: 360deg;
+         scale: 100%;
+    }
+}
+/* .box{
+    animation: 2s myanimations infinite;
+} */
+.emoji{
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+.red:hover{
+    background-color: pink;
+    transition: 1s background-color ease-in;
+}
+    </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <div class="container">
@@ -12,6 +75,9 @@
         <div class="box blue">B</div>
         <div class="box green">G</div>
 
+    </div>
+    <div class="emoji">
+        <i class="fa-solid fa-face-flushed"></i>
     </div>
 </body>
 </html>
