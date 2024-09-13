@@ -63,10 +63,11 @@
     <div class="form-container">
         <h2>Sign Up</h2>
         <form class="login-form" onsubmit="formdata(event)">
-            <input type="text" id="name" name="name" placeholder="Name" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <input type="phone" id="phone" name="phone" placeholder="Phone Number" required>
-            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="text" id="name" name="name" placeholder="Name">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="number"id="age"name="age" placeholder="Age">
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+            <input type="password" id="password" name="password" placeholder="Password">
             <button type="submit">Submit</button>
         </form>
     </div>
@@ -76,18 +77,31 @@
         e.preventDefault();
     let name=document.getElementById("name").value
     let email=document.getElementById("email").value
-    let number=document.getElementById("phone").value
+    let age=document.getElementById("age").value
+    let phone=document.getElementById("phone").value
     let password=document.getElementById("password").value
-        console.log(name)
-        document.write(name)
+        // console.log(name)
+        // document.write(name)
+        if (name!=="" && email!=="" && phone!=="" && password !=="" && age!==0){
+            if(name==="mohan" || email ==="mohan@gmail.com"){
+                console.log("username and mail already exists")
+            }
+            console.log("SUCCESS!")
+        }
+        else{
+            console.log("Empty fields are not allowed..........")
+        }
     const data={
         username:name,
         useremail:email,
+        usertype:age>=18? 'Major':'Minor',
         userphone:phone,
         userpassword:password
+
     }
-    const {username,useremail,userphone,userpassword}=data
-    console.log(useremail)
+    const {username,useremail,usertype,userphone,userpassword}=data
+    // console.log(useremail)
+    console.log(usertype)
 }
     let data1 =[1,2,3,4]
     let data2 =['a','b','c','d']
